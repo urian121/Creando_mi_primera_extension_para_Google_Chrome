@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Llenar formulario</title>
+</head>
+
+<body>
+
+   <form action="">
+      <table>
+         <tr>
+            <td>
+               <label for="">Txt</label>
+               <input type="text">
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="checkbox" name="carrots">
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="date" value="02/10/2022">
+            </td>
+            <td>
+               <label for="">datetime-local</label>
+               <input type="datetime-local">
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <label for="">Txt</label>
+               <input type="email">
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="file">
+               <!--<input type="file" name="file" id="file" accept="image/*" multiple>
+               <input type="file" accept="image/*;capture=camera">
+               <input type="file" accept="video/*;capture=camcorder">
+               <input type="file" accept="audio/*;capture=microphone">
+               -->
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="image">
+               <!--<input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30">-->
+            </td>
+            <td>
+               <label for="">month</label>
+               <input type="month">
+            </td>
+            <td>
+               <label for="">number</label>
+               <input type="number">
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="password">
+            </td>
+         </tr>
+
+         <tr>
+            <td>
+               <label for="">Search</label>
+               <input type="search">
+            </td>
+            <td>
+               <label for="">Txt</label>
+               <input type="tel">
+            </td>
+            <td>
+               <label for="">TIME</label>
+               <input type="time" name="tiempo">
+            </td>
+            <td>
+               <label for="">url</label>
+               <input type="url">
+            </td>
+            <td>
+               <label for="">Year año</label>
+               <input type="year">
+            </td>
+
+            <td>
+               <label for="">Txt</label>
+               <input type="checkbox" value="A2">
+            </td>
+            <td>
+               <label for="msg">Mensaje:</label>
+               <textarea name="user_message"></textarea>
+            </td>
+            <td>
+               <select name="cars">
+                  <!---<option value="0" selected="selected" disabled="disabled">Select Fruit</option> -->
+                  <option value="">seleccione</option>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>
+            </td>
+         </tr>
+      </table>
+
+      <select name="lista">
+         <option value="">-- seleccione--</option>
+         <option value="php">php</option>
+         <option value="html">html</option>
+         <option value="css">css</option>
+      </select>
+
+      <input type="text" name="demo">
+      <input type="text" name="demo1">
+      <input type="text" name="demo2" id="demo2">
+      <textarea name="user_message"></textarea>
+
+      <input type="reset" value="Limpiar formulario">
+
+      <select name="hoo">
+         <option value="1">Casa</option>
+         <option value="2">Auto</option>
+         <option value="3">Moto</option>
+         <option value="0">Seleccione un elemento</option>
+         <option value="4">Castillo</option>
+         <option value="5">Mall</option>
+         <option value="6">Avión</option>
+      </select>
+
+      <select name="miciudad" id="miciudad">
+         <option>Seleccione...</option>
+         <option value="1">Mexico</option>
+         <option value="2">Guanajuato</option>
+         <option value="3">Leon</option>
+      </select>
+
+
+      <select name="numeros" id="feedingHay">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+      </select>
+
+      <select name="country" id="country">
+         <option>Seleccione...</option>
+         <option value="AF">Afghanistan</option>
+         <option value="AL">Albania</option>
+         <option value="ID">Indonesia</option>
+         <option value="ZW">Zimbabwe</option>
+      </select>
+
+      <input type="text" name="demo">
+      <input type="text" name="demo1">
+      <input type="text" name="demo2" id="demo2">
+      <textarea name="user_message"></textarea>
+      <br><br>
+      <input type="checkbox" name="carrots1" value="1">
+      <input type="checkbox" name="carrots2" value="2">
+      <input type="radio" name="meal">
+      <input type="radio" name="mealss">
+
+      <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+         <label class="form-check-label" for="flexRadioDefault1">
+            Default radio
+         </label>
+      </div>
+      <div class="form-check">
+         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+         <label class="form-check-label" for="flexRadioDefault2">
+            Default checked radio
+         </label>
+      </div>
+
+      <br>
+      <label for="file">Archivo</label>
+      <input type="file" src="https://urianviera.com/assets/imgs/logo.png">
+
+
+   </form>
+
+   <button> Llenar formulario</button>
+   <p id="limpiarForm"> Limpiar formulario</p>
+   <!--modificar el valor de un input desde javascript -->
+
+   <script>
+      window.addEventListener('load', (event) => {
+         let miBody = document.body;
+         let numerosAleatorios = ['12340', '40563', '70896', '74012', '85023', '36098', '98074', '65401', '32105', '65408', '95012', '62035'];
+         let emailAleatorios = ['demo@gmail.com', 'desarrollo@hotmail.com', 'developer@gmail.com', 'desarrollo2022@gmail.com', 'brenda2022@gmail.com'];
+         let nombrePersonas = ['Urian', 'Brenda', 'Uriany', 'Web Developer', 'Google', 'Youtube', 'Facebook'];
+         let arrayTextarea = ['La constancia vence lo que la dicho no alcanza', 'A veces es cuestion de dejarse llevar', 'Por algo se empieza cuando se persigue un sueño'];
+         let arrayURL = ['https://google.com','https://youtube.com','https://urianviera.com','https://facebook.com'];
+         //console.log(nombrePersonas[Math.floor(Math.random() * nombrePersonas.length)]) //obtengo un elemento aleatorio de mi array nombrePersonas
+
+
+
+         window.document.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+
+            //Funcion para seleecionar aulgun elemento de los select
+            marcarTodosSelect();
+
+            //Funcion para llenar todos los inputs tipo text y textarea
+            marcarTodosInputsTextTextarea();
+
+            //Funcion para recorrer todos los inputs typo Checkbox
+            marcarTodosCheckBoxsRadios();
+
+            llenarInputsYear();
+
+            llenarInputsTime();
+
+            const inputs = Object.values(document.querySelectorAll("input[type=file]"));
+            inputs.forEach((a, index) => {
+               //const resp = inputs.value = "https://urianviera.com/assets/imgs/logo.png";
+               console.log(a)
+               console.log(a.type, a.name, a.value)
+            });
+
+
+         })
+
+
+
+         const marcarTodosInputsTextTextarea = () => {
+            //Inicio de todos los Inputs y textarea 
+            let listInputsDOM = "input[type='text'], input[type='password'], input[type='email'], input[type='number'], input[type='tel'], input[type='search'], input[type='date'],  input[type='url'], textarea";
+            let objectInputsDom = Object.values(document.querySelectorAll(listInputsDOM));
+            //console.log(objectInputsDom);
+
+            //Recorriendo todos los inputs del Dom
+            objectInputsDom.forEach((itemIputs, index) => {
+               //console.log(itemIputs.type)
+               //console.log(itemIputs.name, itemIputs.type, itemIputs.value )
+
+               if (itemIputs.type === 'text') {
+                  nombrePersonaAleatorio = nombrePersonas[Math.floor(Math.random() * nombrePersonas.length)];
+                  itemIputs.value = nombrePersonaAleatorio;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'textarea') {
+                  arrayAleatorioFases = arrayTextarea[Math.floor(Math.random() * arrayTextarea.length)];
+                  itemIputs.value = arrayAleatorioFases;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'password') {
+                  itemIputs.value = generarPassword(5);
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'email') {
+                  inputEmailAleatorio = emailAleatorios[Math.floor(Math.random() * emailAleatorios.length)];
+                  itemIputs.value = inputEmailAleatorio;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if ((itemIputs.type === 'number') || (itemIputs.type === 'tel')) {
+                  inputNumberAleatorio = numerosAleatorios[Math.floor(Math.random() * numerosAleatorios.length)];
+                  itemIputs.value = inputNumberAleatorio;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'search') {
+                  inputSearchAleatorio = nombrePersonas[Math.floor(Math.random() * nombrePersonas.length)];
+                  itemIputs.value = `Buscando a ${inputSearchAleatorio}`;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'url') {
+                  inputURLAleatorio = arrayURL[Math.floor(Math.random() * arrayURL.length)];
+                  itemIputs.value = inputURLAleatorio;
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               } else if (itemIputs.type === 'date') {
+                  itemIputs.value = inputsFecha();
+                  itemIputs.style.backgroundColor = "#f2f4f8";
+
+               }
+               
+            });
+         }
+         //Fin de todos los inputs
+
+         //FUNCION PARA GENERAR UNA CLAVE ALEATORIA
+         const generarPassword = (num) => {
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            const charactersLength = characters.length;
+            let result = "";
+            let ch;
+            while (result.length < num) {
+               ch = characters.charAt(Math.floor(Math.random() * charactersLength));
+               if (!result.includes(ch)) {
+                  result += ch;
+               }
+            }
+            return result;
+         }
+
+
+         const marcarTodosSelect = () => {
+            //Selects Inicio
+            let selectsDom = Object.values(document.querySelectorAll('select'));
+            selectsDom.forEach((items, index) => {
+               //console.log(items, index);
+               //console.log(items.name); //Los nombres de cada una de las listas select de mi DOM
+               nameSelectDom = items.name;
+
+               //Ahora selecccionar todas las lista select por su nombre
+               let selectNameDom = document.querySelector(`select[name='${nameSelectDom}']`);
+               selectNameDom.value = ''; //Limpiando - seteando cada select de mi DOM
+
+               totalSelectOptionDom = selectNameDom.options.length; //Total de option por cada select
+               //console.log(`#select ${nameSelectDom} # options  ${totalSelectOptionDom}`);
+
+               //Genero del 1 al numeros de option un numero aleatorio entre ese rango, no empoezo desde el 0 por que esa opcion puede 
+               //ser el primer option con valor vacio
+               const randomSelectDom = (Math.floor(Math.random() * totalSelectOptionDom) + 1); //de 1 a totalSelectOptionDom
+               //console.log('# random para cada option ' + randomSelectDom);
+               //console.log(`#select ${nameSelectDom} # options  ${totalSelectOptionDom} random ${randomSelectDom}`);
+
+               if (randomSelectDom < totalSelectOptionDom) {
+                  selectNameDom.options.item(randomSelectDom).selected = 'selected';
+               } else {
+                  selectNameDom.options.item(2).selected = 'selected';
+               }
+            });
+         }
+         //Fin de todos los select
+
+
+         const marcarTodosCheckBoxsRadios = () => {
+            // Recorriendo todos los checkbox y radios no deben estar en el mismo recorrido de los input y textarea
+            let objectInputsChecboxDom = Object.values(document.querySelectorAll("input[type='checkbox'], input[type='radio']"));
+            objectInputsChecboxDom.forEach((itemIputsChecbox, index) => {
+               //console.log(itemIputsChecbox)
+               //console.log(itemIputsChecbox.type, itemIputsChecbox.name)
+               itemIputsChecbox.checked = true;
+            });
+         }
+
+
+         //Funcion para limpiar mi formulario
+         let limpiar = document.querySelector('#limpiarForm').addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(e);
+            document.querySelector("form").reset();
+            /* const form = document.getElementsByName('form');
+             console.log(form);*/
+
+         });
+
+
+         const inputsFecha = () => {
+            const infoFecha = new Date();
+            //const hoy =`${infoFecha.getFullYear()}-${infoFecha.getMonth()}-${infoFecha.getDate()}`;
+            //console.log(hoy);
+
+            let dia = infoFecha.getDate();
+            if (dia <= 9) {
+               dia = `0${dia}`
+            }
+            return `${infoFecha.getFullYear()}-${infoFecha.getMonth()}-${dia}`;
+         }
+
+
+
+         const llenarInputsYear = () => {
+            document.querySelectorAll("input[type=year]").forEach((year) => {
+               const fecha = new Date();
+               yearActual = fecha.getFullYear();
+
+               year.value = yearActual;
+               year.style.backgroundColor = "#f2f4f8";
+            })
+         }
+
+
+         const llenarInputsTime = () => {
+            document.querySelectorAll("input[type=time]").forEach((tiempo) => {
+               console.log('aaaaa');
+               momentoActual = new Date() 
+               hora = momentoActual.getHours() 
+               minuto = momentoActual.getMinutes() 
+               segundo = momentoActual.getSeconds() 
+
+               horaImprimible = hora + " : " + minuto + " p. m."
+               console.log(horaImprimible)
+
+               tiempo.value = horaImprimible;
+               tiempo.style.backgroundColor = "#f2f4f8";
+            });
+         }
+        
+
+
+      });
+
+   </script>
+</body>
+
+</html>
