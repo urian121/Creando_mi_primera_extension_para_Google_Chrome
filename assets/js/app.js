@@ -176,21 +176,21 @@ const llenarInputsFile = () => {
   fetch("https://picsum.photos/200")
     .then((response) => response.blob())
     .then((blob) => {
-      // Crear una URL para la imagen
-      const url = URL.createObjectURL(blob);
-
-      // Seleccionar el input de tipo file
-      const fileInput = document.querySelector('input[type="file"]');
-
-      // Crear un objeto Blob con la imagen y establecer el valor del input de tipo file
-      const file = new Blob([blob], { type: "image/jpeg" });
-      const fileOptions = { type: "image/jpeg", lastModified: Date.now() };
-      const imageFile = new File([file], "random_image.jpg", fileOptions);
-      const fileList = new DataTransfer();
-      fileList.items.add(imageFile);
-      fileInput.files = fileList.files;
+      // Seleccionar los inputs de tipo file
+      const fileInputs = document.querySelectorAll('input[type="file"]');
+      for (let i = 0; i < fileInputs.length; i++) {
+        const fileInput = fileInputs[i];
+        // Crear un objeto Blob con la imagen y establecer el valor del input de tipo file
+        const fileBlob = new Blob([blob], { type: "image/jpeg" });
+        const fileOptions = { type: "image/jpeg", lastModified: Date.now() };
+        const imageFile = new File([fileBlob], "random_image.jpg", fileOptions);
+        const fileList = new DataTransfer();
+        fileList.items.add(imageFile);
+        fileInput.files = fileList.files;
+      }
     });
 };
+
 
 /**
  * Llenando todos los input[type=date]
