@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Form Auto Filler Pro",
+  "author": "Urian Jose Viera Parra",
+  "description": "Con Form Auto Filler Pro, puedes llenar rápidamente todos los campos de un formulario con valores aleatorios. ¡Adiós a la tediosa tarea de llenar formularios manualmente! Solo abre la extensión y haz clic en el botón para llenar automáticamente los campos del formulario. Descarga Form Auto Filler Pro ahora y ahorra tiempo y esfuerzo en la introducción de datos",
+  "version": "1.0",
+  "icons": {
+    "16": "images/16x16.png",
+    "32": "images/32x32.png",
+    "48": "images/48x48.png",
+    "128": "images/128x128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup/popup.js"],
+      "css": ["popup/popup.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/128x128.png",
+    "default_title": "Llenar formulario"
+  },
+
+  "permissions": ["storage", "activeTab", "scripting", "tabs"]
+}

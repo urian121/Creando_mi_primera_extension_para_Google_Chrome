@@ -1,0 +1,26 @@
+.loader-active {
+  background-color: #fff;
+  opacity: 0.2;
+}
+.miButton,
+.limpiar {
+  color: white;
+  transition: color 0.25s ease, background 0.25s ease;
+  background: #2ecc71;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  margin: 5px 2px;
+}
+
+.limpiar {
+  background: #ff5564;
+}
+
+.miButton:hover,
+.limpiar:hover {
+  cursor: pointer;
+  color: #333;
+  font-weight: 400;
+}
